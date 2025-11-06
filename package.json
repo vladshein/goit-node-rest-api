@@ -1,0 +1,31 @@
+{
+  "name": "goit-node-template",
+  "version": "1.0.0",
+  "description": "Template project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladshein/goit-node-template.git"
+  },
+  "keywords": [],
+  "author": "Vladyslav Shein <vlshein1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladshein/goit-node-template/issues"
+  },
+  "homepage": "https://github.com/vladshein/goit-node-template#readme",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "express": "^5.1.0",
+    "nanoid": "^5.1.6"
+  }
+}
