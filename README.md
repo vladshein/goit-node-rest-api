@@ -1,3 +1,3 @@
-# goit-node-cli-template
+# goit-node-rest-api
 
-Template repository for Node JS
+Repository for Home work2
