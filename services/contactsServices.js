@@ -24,9 +24,9 @@ async function addContact(name, email, phone, favorite = false) {
 async function updateContact(id, name, email, phone, favorite) {
     const contact = await Contact.findByPk(id);
     if (!contact) return null;
-    updatedContact = { name, email, phone, favorite };
 
-    await contact.update(updatedContact);
+    const updatedContact = { name, email, phone, favorite };
+    return await contact.update(updatedContact);
 }
 
 async function updateContactFavorite(id, payload) {

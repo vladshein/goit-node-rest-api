@@ -29,9 +29,10 @@ export const createContact = async (req, res) => {
 };
 
 export const updateContact = async (req, res) => {
-    const { name, email, phone } = req.body;
+    const { id } = req.params;
+    const { name, email, phone, favorite } = req.body;
 
-    const contact = await contactsService.updateContact(req.params.id, name, email, phone);
+    const contact = await contactsService.updateContact(id, name, email, phone, favorite);
     if (!contact) {
         throw HttpError(404, `Not found`);
     }
