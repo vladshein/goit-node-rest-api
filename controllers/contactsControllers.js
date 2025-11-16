@@ -38,8 +38,7 @@ export const updateContact = async (req, res) => {
     res.status(200).json(contact);
 };
 
-////////////////
-export const updateContactStatus = async (req, res) => {
+export const updateStatusContact = async (req, res) => {
     const { id } = req.params;
     const contact = await contactsService.updateContactFavorite(id, req.body);
     if (!contact) {
