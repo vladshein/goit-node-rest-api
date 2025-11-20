@@ -16,6 +16,9 @@ export const createContactSchema = Joi.object({
             "any.required": "phone is required",
             "base.string": "phone must be a valid string",
         }),
+    favorite: Joi.boolean().messages({
+        "boolean.base": '"favorite" must be true or false',
+    }),
 });
 
 export const updateContactSchema = Joi.object({
@@ -30,6 +33,16 @@ export const updateContactSchema = Joi.object({
         .messages({
             "base.string": "phone must be a valid string",
         }),
+    favorite: Joi.boolean().messages({
+        "boolean.base": '"favorite" must be true or false',
+    }),
 })
     .min(1)
     .messages({ "object.min": "Body must have at least one field" });
+
+export const updateFavoriteSchema = Joi.object({
+    favorite: Joi.boolean().required().messages({
+        "boolean.base": '"favorite" must be true or false',
+        "any.required": '"favorite" is a required field',
+    }),
+});
