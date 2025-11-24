@@ -4,7 +4,7 @@ import { emailRegExp } from "../constants/authConstants.js";
 export const registerSchema = Joi.object({
     password: Joi.string().required().min(8).messages({
         "any.required": "Username is required",
-        "base.string": "Password must be a string",
+        "string.base": "Password must be a string",
         // min: "Password must be at least 8 symbols",
     }),
 
