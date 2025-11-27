@@ -28,8 +28,14 @@ const User = sequelize.define("user", {
         defaultValue: null,
         allowNull: true,
     },
+
+    avatarURL: {
+        type: DataTypes.STRING,
+        defaultValue: null,
+        allowNull: true,
+    },
 });
 
-// User.sync({ alter: true });
+// User.sync({ force: true });
 
 export default User;
